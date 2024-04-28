@@ -61,39 +61,6 @@
     </header>
 
     <div class="wrapper">
-        <!-- <form action="/backend.php" method="post" class="login-form">
-            <div class="login form">
-                <div>
-                    <h1 class="loginid text">Sign UP</h1>
-                </div>
-                <div>
-                    <p>
-                        Already have an Account? <a href="/login.html" class="forgot">Login</a>
-                    </p>
-                </div>
-                <div>
-                    <div class="loginid">
-                        <input type="number" id="mobile" name="mobilenumber" placeholder="Mobile Number">
-                    </div><br>
-                    <div class="loginid">
-                        <input type="text" name="myname" id="name" placeholder="Full Name">
-                    </div><br>
-                    <div class="loginid">
-                        <input type="name" name="username" id="username" placeholder="Username">
-                    </div><br>
-                    <div class="loginid">
-                        <input type="password" name="password" id="password" placeholder="Password">
-                    </div><br>
-                    <div class="loginid">
-                        <input type="password" name="password" id="password" placeholder="Confirm Password">
-                    </div>
-                </div>
-                <br>
-                <div>
-                    <a href="/index.html" class="btn dark login">Sign UP</a><br>
-                </div>
-            </div>
-        </form> -->
 
         <div class="services-container">
             <h2 style="font-size: 40px; margin-top: 20px; margin-bottom: 20px;">Electric Vehicle Booking</h2>
@@ -107,17 +74,17 @@
                   </select>
                   <label for="from">From:</label>
                   <select id="from">
-                    <option value="Place1">BH-4 Grounds</option>
-                    <option value="Place2">Uni Hospital</option>
-                    <option value="Place3">Block-25</option>
-                    <option value="Place4">Uni Mall</option>
+                    <option value="BH-4 Grounds">BH-4 Grounds</option>
+                    <option value="Uni Hospital">Uni Hospital</option>
+                    <option value="Block-25">Block-25</option>
+                    <option value="Uni Mall">Uni Mall</option>
                   </select>
                   <label for="to">To:</label>
                   <select id="to">
-                    <option value="Place1">Uni Hospital</option>
-                    <option value="Place2">Uni Mall</option>
-                    <option value="Place3">Block-25</option>
-                    <option value="Place4">Bh-4 Grounds</option>
+                    <option value="Bh-4 Grounds">Bh-4 Grounds</option>
+                    <option value="Block-25">Block-25</option>
+                    <option value="Uni Mall">Uni Mall</option>
+                    <option value="Uni Hospital">Uni Hospital</option>
                   </select>
                   <label for="totalTickets">Total Tickets:</label>
                   <input type="number" id="totalTickets" min="1" value="1"><br><br>
@@ -203,6 +170,13 @@
           const from = document.getElementById("from").value;
           const to = document.getElementById("to").value;
           const totalTickets = parseInt(document.getElementById("totalTickets").value, 10);
+
+          // Check if "From" and "To" are the same
+          if (from === to) {
+            alert('Please select different places for "From" and "To".');
+            return; // Stop further execution of the function
+          }
+
           const bookingTime = new Date();
           const expirationTime = new Date(bookingTime.getTime() + (30 * 60 * 1000)); // 30 minutes later
           let ticketDetails = '';
