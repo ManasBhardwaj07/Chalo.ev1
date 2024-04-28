@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .services-container {
+    width: 80%;
+    margin: 50px auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  label, select, button {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 25px
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  
+  .services-ticket {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .services-ticket h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+  .services-ticket p {
+    margin-bottom: 10px;
+  }
+  .services-ticket-details {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+  }
+
+  .services-container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .services-ticket {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .services-ticket-info, .services-journey-info, .services-time-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .services-ticket-info span, .services-journey-info span, .services-time-info span {
+    font-weight: bold;
+  }
+
+  .services-ticket-info span:nth-child(2), .services-journey-info span:nth-child(2), .services-time-info span:nth-child(2) {
+    text-align: right;
+  }
+
+
+  .services-buying-form{
+    
+    border: 10px solid black;
+    padding: 5px;
+    border-radius: 40px;
+  }
+
+  .services-buying-form-inner {
+    border: 5px dashed black;
+    border-radius: 20px;
+  }
+
+  

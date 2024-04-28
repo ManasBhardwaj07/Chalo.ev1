@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALO.ev</title>
+
+    <!-- fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- header start here -->
+
+    <header class="morepage" style="height: 120px;">
+        <div class="wrapper">
+
+            <!-- nav start here -->
+
+            <nav>
+
+                <!-- logo -->
+
+                <div class="logo">
+                    <a href="index.html">CHALO<span style="color: rgb(255, 196, 0); font-size: 35px;">.ev</span></a>
+                </div>
+
+                <!-- menu bar -->
+
+                <ul>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="review.html">Our Work</a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="btn dark">Login</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- end of desktop navigation -->
+
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <!-- <form action="/backend.php" method="post" class="login-form">
+            <div class="login form">
+                <div>
+                    <h1 class="loginid text">Sign UP</h1>
+                </div>
+                <div>
+                    <p>
+                        Already have an Account? <a href="/login.html" class="forgot">Login</a>
+                    </p>
+                </div>
+                <div>
+                    <div class="loginid">
+                        <input type="number" id="mobile" name="mobilenumber" placeholder="Mobile Number">
+                    </div><br>
+                    <div class="loginid">
+                        <input type="text" name="myname" id="name" placeholder="Full Name">
+                    </div><br>
+                    <div class="loginid">
+                        <input type="name" name="username" id="username" placeholder="Username">
+                    </div><br>
+                    <div class="loginid">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div><br>
+                    <div class="loginid">
+                        <input type="password" name="password" id="password" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <a href="/index.html" class="btn dark login">Sign UP</a><br>
+                </div>
+            </div>
+        </form> -->
+
+        <div class="services-container">
+            <h2 style="font-size: 40px; margin-top: 20px; margin-bottom: 20px;">Electric Vehicle Booking</h2>
+            <div class="services-buying-form" id="buyingForm">
+              <div class="services-buying-form-inner">
+                <form id="bookingForm">
+                  <label for="capacity">Select Sitting Capacity:</label>
+                  <select id="capacity">
+                    <option value="6">6 people</option>
+                    <option value="9">9 people</option>
+                  </select>
+                  <label for="from">From:</label>
+                  <select id="from">
+                    <option value="Place1">BH-4 Grounds</option>
+                    <option value="Place2">Uni Hospital</option>
+                    <option value="Place3">Block-25</option>
+                    <option value="Place4">Uni Mall</option>
+                  </select>
+                  <label for="to">To:</label>
+                  <select id="to">
+                    <option value="Place1">Uni Hospital</option>
+                    <option value="Place2">Uni Mall</option>
+                    <option value="Place3">Block-25</option>
+                    <option value="Place4">Bh-4 Grounds</option>
+                  </select>
+                  <label for="totalTickets">Total Tickets:</label>
+                  <input type="number" id="totalTickets" min="1" value="1"><br><br>
+                  <button type="button" onclick="bookTicket()" class="services-btn">Book Ticket(s)</button>
+                </form>
+              </div>
+            </div>
+            <div id="ticket" class="services-ticket" style="display: none;">
+              <h2>Ticket Details</h2>
+              <div id="ticketDetails"></div>
+              <button type="button" id="completeJourneyBtn" onclick="completeJourney()" style="display: none;">Journey Completed</button>
+            </div>
+            <div id="completionMessage" style="display: none;">
+              <h2 style="font-size: 40px; margin-top: 20px;">Thanks for using the EV!</h2>
+            </div>
+          </div>
+    </div>
+
+
+<!-- footer starts here -->
+<footer>
+    <div class="wrapper">
+        <div class="links-container">
+            <div class="links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="about.html">About US</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact US</a>
+                    </li>
+                    <li>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="terms.html">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>More</h3>
+                <ul>
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                    <li>
+                        <a href="#">Download</a>
+                    </li>
+                    <li>
+                        <a href="#">All Trips</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Contact US</h3>
+                <ul>
+                    <li class="email">
+                        CONTACT@CHALO.ev
+                    </li>
+                    <div class="social">
+                        <a href="#">
+                            <img src="images/Facebook_Logo.png" alt="" width="40px" height="40px" />
+                        </a>
+                        <a href="#">
+                            <img src="images/instagram-logo.png" alt="" width="40px" height="40px" />
+                        </a>
+                    </div>
+                    <form action="#">
+                        <input type="text" placeholder="Email Address">
+                        <button class="submit-btn">Subscribe</button>
+                    </form>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">This website is Developed by CHALO.ev in 2022.</p>
+    </div>
+</footer>
+    <script src="main.js"></script>
+    <script>
+        function bookTicket() {
+          const capacity = document.getElementById("capacity").value;
+          const from = document.getElementById("from").value;
+          const to = document.getElementById("to").value;
+          const totalTickets = parseInt(document.getElementById("totalTickets").value, 10);
+          const bookingTime = new Date();
+          const expirationTime = new Date(bookingTime.getTime() + (30 * 60 * 1000)); // 30 minutes later
+          let ticketDetails = '';
+    
+          ticketDetails += `<div class="services-ticket-info"><span>Total Tickets:</span> ${totalTickets}</div>`;
+          ticketDetails += `<div class="services-ticket-info"><span>Vehicle Type:</span> ${capacity}-seater</div>`;
+          ticketDetails += `<div class="services-journey-info"><span>Journey Starts From:</span> ${from}</div>`;
+          ticketDetails += `<div class="services-journey-info"><span>Journey Ends:</span> ${to}</div>`;
+          ticketDetails += `<div class="services-time-info"><span>Ticket Valid From:</span> ${formatTime(bookingTime)}</div>`;
+          ticketDetails += `<div class="services-time-info"><span>Ticket Valid Till:</span> ${formatTime(expirationTime)}</div>`;
+    
+          // Save ticket details to localStorage
+          localStorage.setItem("ticketDetails", ticketDetails);
+    
+          // Display ticket details
+          const ticketDiv = document.getElementById("ticket");
+          const ticketDetailsElement = document.getElementById("ticketDetails");
+          ticketDetailsElement.innerHTML = ticketDetails;
+          ticketDiv.style.display = "block";
+    
+          // Hide ticket purchase form
+          document.getElementById("buyingForm").style.display = "none";
+    
+          // Show "Journey Completed" button after alert
+          alert('Tickets booked successfully.');
+          document.getElementById("completeJourneyBtn").style.display = "inline-block";
+    
+          // Set a timer to hide the ticket after 30 minutes
+          setTimeout(hideTicket, 30 * 60 * 1000);
+        }
+    
+        // Helper function to format time
+        function formatTime(time) {
+          const hours = time.getHours().toString().padStart(2, '0');
+          const minutes = time.getMinutes().toString().padStart(2, '0');
+          return `${hours}:${minutes}`;
+        }
+    
+        function hideTicket() {
+          // Clear ticket details from localStorage
+          localStorage.removeItem("ticketDetails");
+    
+          // Hide ticket details and display completion message
+          document.getElementById("ticket").style.display = "none";
+          document.getElementById("completionMessage").style.display = "block";
+    
+          // Hide "Journey Completed" button after completion
+          document.getElementById("completeJourneyBtn").style.display = "none";
+    
+          // Show ticket purchase form
+          document.getElementById("buyingForm").style.display = "block";
+        }
+    
+        function completeJourney() {
+          // Clear ticket details from localStorage
+          localStorage.removeItem("ticketDetails");
+    
+          // Hide ticket details and display completion message
+          document.getElementById("ticket").style.display = "none";
+          document.getElementById("completionMessage").style.display = "block";
+    
+          // Hide "Journey Completed" button after completion
+          document.getElementById("completeJourneyBtn").style.display = "none";
+    
+          // Show ticket purchase form
+          document.getElementById("buyingForm").style.display = "block";
+        }
+    
+        // Check if ticket details are saved in localStorage on page load
+        window.onload = function() {
+          const savedTicket = localStorage.getItem("ticketDetails");
+          if (savedTicket) {
+            const ticketDiv = document.getElementById("ticket");
+            const ticketDetailsElement = document.getElementById("ticketDetails");
+            ticketDetailsElement.innerHTML = savedTicket;
+            ticketDiv.style.display = "block";
+            // Show "Journey Completed" button if tickets are already booked
+            document.getElementById("completeJourneyBtn").style.display = "inline-block";
+    
+            // Hide ticket purchase form
+            document.getElementById("buyingForm").style.display = "none";
+    
+            // Set a timer to hide the ticket after 30 minutes if not already expired
+            setTimeout(hideTicket, 30 * 60 * 1000);
+          }
+        };
+      </script>
+</body>
+</html>
